@@ -1,0 +1,34 @@
+server:
+  port: 8002
+
+spring:
+  application:
+    name: employee-duty-service
+  datasource:
+    url: jdbc:h2:mem:employee-duty-db
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+  cloud:
+    stream:
+      kafka:
+        binder:
+          replicationFactor: 1
+          auto-create-topics: true
+          brokers: "${KAFKA_URL:localhost:9092}"
+      bindings:
+        binding-out-change-event:
+          destination: change-event
+          group: change-event
+  kafka:
+    bootstrap-servers: "${KAFKA_URL:localhost:9092}"
+logging:
+  level:
+    com.example.employeeDutyService: DEBUG
+    org.apache.kafka: OFF
+

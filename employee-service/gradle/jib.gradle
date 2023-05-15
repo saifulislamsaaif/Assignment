@@ -1,0 +1,20 @@
+jib {
+    from {
+        image = "eclipse-temurin:17-jre-alpine"
+        platforms {
+            platform {
+                architecture = "${findProperty('jibArchitecture') ?: 'amd64'}"
+                os = "linux"
+            }
+        }
+    }
+    to {
+        image = "${rootProject.name}"
+        tags = ["latest"]
+    }
+    container{
+        jvmFlags = ['-XX:+UnlockExperimentalVMOptions','-XX:MaxRAMPercentage=70', '-XX:+UseZGC', '-Xmx512m', '-Xms256m']
+//        user = 'spring:spring'
+        creationTime = 'USE_CURRENT_TIMESTAMP'
+    }
+}

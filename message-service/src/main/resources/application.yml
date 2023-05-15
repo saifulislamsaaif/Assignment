@@ -1,0 +1,33 @@
+server:
+  port: 8003
+
+spring:
+  cloud:
+    function:
+      definition: dutyEventSink
+    stream:
+      kafka:
+        binder:
+          replicationFactor: 1
+          auto-create-topics: true
+          brokers: "${KAFKA_URL:localhost:9092}"
+      bindings:
+        dutyEventSink-in-0:
+          destination: change-event
+          group: change-event
+  kafka:
+    bootstrap-servers: "${KAFKA_URL:localhost:9092}"
+
+
+employee:
+  baseUrl: "${EMPLOYEE_BASE_URL:http://localhost:8001}"
+  duty:
+    baseUrl: "${EMPLOYEE_DUTY_BASE_URL:http://localhost:8002}"
+
+
+logging:
+  level:
+    com.example.messageservice: DEBUG
+    org.apache.kafka: OFF
+
+
