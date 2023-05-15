@@ -1,9 +1,10 @@
 {
 	"info": {
-		"_postman_id": "a889c1d0-26b3-4351-8d1e-3b06ebc9c7c3",
+		"_postman_id": "36020a8c-6e8a-4676-b0db-78f798a081ab",
 		"name": "Assignment",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "3164636"
+		"_exporter_id": "3164636",
+		"_collection_link": "https://www.postman.com/saifulislamsaaif/workspace/assignment/collection/3164636-36020a8c-6e8a-4676-b0db-78f798a081ab?action=share&creator=3164636&source=collection_link"
 	},
 	"item": [
 		{
@@ -165,7 +166,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"test\",\n    \"phone\": \"071-334-8475\",\n    \"email\": \"test@test.com\",\n    \"joiningDate\": \"2023-04-11\"\n}",
+							"raw": "{\n    \"name\": \"Md Saiful Islam\",\n    \"phone\": \"076-970-2327\", \n    \"email\": \"saifulislamsaaif@gmail.com\",\n    \"joiningDate\": \"2023-04-11\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"

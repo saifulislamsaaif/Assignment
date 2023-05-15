@@ -22,4 +22,4 @@ docker-compose -f docker-compose.yml up -d
 ```
 
 ## Testing instruction
-Import Assignment.postman_collection.json in Postman
+Import Assignment.postman_collection.json in Postman or https://www.postman.com/saifulislamsaaif/workspace/assignment/
